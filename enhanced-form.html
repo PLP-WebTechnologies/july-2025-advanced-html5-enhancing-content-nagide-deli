@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Demonstration</title>
+</head>
+<body>
+    <header>
+        <h1>Advanced HTML5 Features</h1>
+        <nav>
+            <ul>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lists">
+            <h2>Organized Content with Lists</h2>
+            
+            <article>
+                <h3>Ordered List - Top 3 Programming Languages</h3>
+                <ol>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ol>
+            </article>
+            
+            <article>
+                <h3>Unordered List - Web Development Components</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Backend Technologies</li>
+                </ul>
+            </article>
+            
+            <article>
+                <h3>Description List - HTML5 Terms</h3>
+                <dl>
+                    <dt>Semantic Elements</dt>
+                    <dd>Elements like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; that clearly describe their meaning.</dd>
+                    
+                    <dt>Form Validation</dt>
+                    <dd>Built-in browser validation using HTML5 attributes without JavaScript.</dd>
+                    
+                    <dt>Media Elements</dt>
+                    <dd>&lt;audio&gt; and &lt;video&gt; tags for embedding media directly in HTML.</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="tables">
+            <h2>Data Organization with Tables</h2>
+            
+            <table>
+                <caption>Monthly Tech Conference Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Conference</th>
+                        <th>Location</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>CES</td>
+                        <td>Las Vegas</td>
+                        <td>3 days</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>SXSW</td>
+                        <td>Austin</td>
+                        <td>10 days</td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>Google I/O</td>
+                        <td>Mountain View</td>
+                        <td>2 days</td>
+                    </tr>
+                    <tr>
+                        <td>June</td>
+                        <td>WWDC</td>
+                        <td>San Jose</td>
+                        <td>5 days</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">All dates are subject to change</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Media Elements in HTML5</h2>
+            
+            <article>
+                <h3>Image with Figure and Caption</h3>
+                <figure>
+                    <img src="https://via.placeholder.com/400x200" alt="Placeholder image demonstrating HTML5 features" width="400" height="200">
+                    <figcaption>Figure 1: Demonstration of HTML5 media capabilities</figcaption>
+                </figure>
+            </article>
+            
+            <article>
+                <h3>Audio Element</h3>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+            
+            <article>
+                <h3>Video Element</h3>
+                <video width="400" controls poster="https://via.placeholder.com/400x200">
+                    <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+        </section>
+
+        <section id="form">
+            <h2>Advanced HTML5 Form</h2>
+            
+            <form id="registration" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50" placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="user@example.com" autocomplete="email">
+                    </div>
+                    
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+                    
+                    <div>
+                        <label for="birthdate">Date of Birth:</label>
+                        <input type="date" id="birthdate" name="birthdate" required min="1900-01-01" max="2025-01-01">
+                    </div>
+                    
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="18" max="120" readonly>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Account Details</legend>
+                    
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="4-20 alphanumeric characters">
+                    </div>
+                    
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required minlength="8" placeholder="Minimum 8 characters" autocomplete="new-password">
+                    </div>
+                    
+                    <div>
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter your password">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <div>
+                        <label for="avatar">Profile Picture:</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                    </div>
+                    
+                    <div>
+                        <label for="website">Personal Website:</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="favcolor">Favorite Color:</label>
+                        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                    </div>
+                    
+                    <div>
+                        <label for="volume">Notification Volume:</label>
+                        <input type="range" id="volume" name="volume" min="0" max="100" step="10" value="50">
+                    </div>
+                    
+                    <div>
+                        <label>Interests:</label>
+                        <div>
+                            <input type="checkbox" id="webdev" name="interests" value="webdev" checked>
+                            <label for="webdev">Web Development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mobile" name="interests" value="mobile">
+                            <label for="mobile">Mobile Development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ai" name="interests" value="ai">
+                            <label for="ai">Artificial Intelligence</label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label>Subscription Level:</label>
+                        <div>
+                            <input type="radio" id="free" name="subscription" value="free" checked>
+                            <label for="free">Free</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pro" name="subscription" value="pro">
+                            <label for="pro">Pro ($9.99/month)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="enterprise" name="subscription" value="enterprise">
+                            <label for="enterprise">Enterprise ($29.99/month)</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <div>
+                        <label for="bio">Biography:</label>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..." maxlength="500"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>Select your country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="timezone">Timezone:</label>
+                        <select id="timezone" name="timezone" size="4">
+                            <optgroup label="Americas">
+                                <option value="est">Eastern (EST)</option>
+                                <option value="cst">Central (CST)</option>
+                                <option value="mst">Mountain (MST)</option>
+                                <option value="pst">Pacific (PST)</option>
+                            </optgroup>
+                            <optgroup label="Europe/Africa">
+                                <option value="gmt">GMT</option>
+                                <option value="cet">CET</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="skills">Technical Skills:</label>
+                        <input list="skill-list" id="skills" name="skills" placeholder="Select or type your skills">
+                        <datalist id="skill-list">
+                            <option value="HTML5">
+                            <option value="CSS3">
+                            <option value="JavaScript">
+                            <option value="Python">
+                            <option value="Java">
+                            <option value="SQL">
+                        </datalist>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <label for="notifications">Receive notifications:</label>
+                    <input type="checkbox" id="notifications" name="notifications" checked>
+                </div>
+                
+                <div>
+                    <label for="promos">Receive promotional offers:</label>
+                    <input type="checkbox" id="promos" name="promos">
+                </div>
+                
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset Form</button>
+                    <button type="button" id="help">Help</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Advanced HTML5 Demonstration. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:info@html5demo.com">info@html5demo.com</a>
+        </address>
+    </footer>
+</body>
+</html>
